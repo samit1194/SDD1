@@ -1,4 +1,22 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(npx gsd-core *)",
+      "Read(.planning/*)",
+      "Write(.planning/*)",
+      "Read(STATE.md)",
+      "Write(STATE.md)",
+      "WebFetch(domain:langchain-ai.github.io)",
+      "WebSearch",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(.secrets)"
+    ]
+  },
   "hooks": {
     "SessionStart": [
       {
@@ -160,19 +178,5 @@
   },
   "worktree": {
     "baseRef": "head"
-  },
-  "permissions": {
-    "allow": [
-      "Bash(npx gsd-core *)",
-      "Read(.planning/*)",
-      "Write(.planning/*)",
-      "Read(STATE.md)",
-      "Write(STATE.md)"
-    ],
-    "deny": [
-      "Read(.env)",
-      "Read(.env.*)",
-      "Read(.secrets)"
-    ]
   }
 }
