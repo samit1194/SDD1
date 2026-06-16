@@ -23,7 +23,21 @@ The complete product requirements document covering:
 
 **Read this first** for business and functional requirements.
 
-### 2. **addendum.md** (Technical Details)
+### 2. **spec.md** (Technical Specification — 8 pages)
+Comprehensive technical specification including:
+- System architecture and execution model
+- Complete API specification (CLI arguments, JSON schemas)
+- Detailed data models (Pydantic definitions)
+- Node-by-node specifications with algorithms
+- Error handling and failure modes
+- Performance targets and scalability constraints
+- Security considerations (API keys, input validation, prompt injection)
+- Testing strategy and evaluation metrics
+- Appendices (glossary, references)
+
+**Read this for system design** — formal algorithms, constraints, and test strategy.
+
+### 3. **addendum.md** (Implementation Guide)
 Deep-dive technical reference including:
 - LangGraph architecture and node implementations
 - Pydantic state models
@@ -33,11 +47,10 @@ Deep-dive technical reference including:
 - Dependencies and quick setup (2 hours)
 - Evaluation metrics and test cases
 - Post-MVP roadmap
-- Assumptions validation checklist
 
 **Read this for implementation** — copy-paste ready code patterns.
 
-### 3. **.decision-log.md** (Audit Trail)
+### 4. **.decision-log.md** (Audit Trail)
 Complete decision record with:
 - Initiation and scope framing
 - Stakes calibration (internal MVP, 2-hour window)
@@ -48,7 +61,7 @@ Complete decision record with:
 
 **Use this to understand** why design choices were made.
 
-### 4. **README.md** (This File)
+### 5. **README.md** (This File)
 Navigation and quick reference.
 
 ---
@@ -113,13 +126,24 @@ cat review_report.json
 
 ---
 
-## 📞 Questions?
+## 📖 Reading Order
 
-Refer to:
-- **Business/Functional Q**: See `prd.md`
-- **Technical/How Q**: See `addendum.md`
-- **Why/Decision Q**: See `.decision-log.md`
+1. **Start here**: `prd.md` — understand what you're building
+2. **Then read**: `spec.md` — understand how it works (architecture, algorithms, constraints)
+3. **For coding**: `addendum.md` — copy-paste code patterns and setup
+4. **Reference**: `.decision-log.md` — understand why decisions were made
 
 ---
 
-**Ready to build.** Start with § A and B of `addendum.md` for implementation patterns.
+## 📞 Questions?
+
+| Question Type | Read This |
+|--------------|-----------|
+| What are we building? | `prd.md` |
+| How should it work? | `spec.md` |
+| What's the code? | `addendum.md` |
+| Why this approach? | `.decision-log.md` |
+
+---
+
+**Ready to build.** Follow the reading order above, then use code patterns from `addendum.md` § A & B.
